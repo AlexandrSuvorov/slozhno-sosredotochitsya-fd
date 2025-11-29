@@ -4,33 +4,32 @@
   переключая тему
 */
 :root.theme-dark {
-    --bg-cover-image: url(../images/cover-image-dark.png);
-    --accent-color: #FF0070;
-    --secondary-color: #DB00FF;
-    --optional-color: #F1B2CE;
-    --bg-color: #000028;
-    --border-font-color:var(--accent-color);
-    --accent-color-opacity-40: #FF007066;
-    --rec-visibility: visible;
-    --header-text-color: var(--bg-color);
-    --section-text-color: var(--optional-color); 
-    --footer-shadow-color:var(--accent-color);
+  --bg-cover-image: url(../images/cover-image-dark.png);
+  --accent-color: #ff0070;
+  --secondary-color: #db00ff;
+  --optional-color: #f1b2ce;
+  --bg-color: #000028;
+  --border-font-color: var(--accent-color);
+  --accent-color-opacity-40: #ff007066;
+  --rec-visibility: visible;
+
+  --header-text-color: var(--bg-color);
+  --section-text-color: var(--optional-color);
+  --footer-shadow-color: var(--accent-color);
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
+  :root {
     --bg-cover-image: url(../images/cover-image-dark.png);
-    --accent-color: #FF0070;
-    --secondary-color: #DB00FF;
-    --optional-color: #F1B2CE;
+    --accent-color: #ff0070;
+    --secondary-color: #db00ff;
+    --optional-color: #f1b2ce;
     --bg-color: #000028;
-    --border-font-color:var(--accent-color);
-    --accent-color-opacity-40: #FF007066;
+    --border-font-color: var(--accent-color);
+    --accent-color-opacity-40: #ff007066;
     --rec-visibility: visible;
     --header-text-color: var(--bg-color);
-    --section-text-color: var(--optional-color); 
-    --footer-shadow-color:var(--accent-color);
-    }
+    --section-text-color: var(--optional-color);
+    --footer-shadow-color: var(--accent-color);
+  }
 }
-
-

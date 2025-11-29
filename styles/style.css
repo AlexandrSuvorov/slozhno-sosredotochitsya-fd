@@ -7,6 +7,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   block-size: 100vh;
 }
 
@@ -40,6 +41,7 @@
 /*rec с точкой*/
 .rec {
   position: absolute;
+  visibility: var(--rec-visibility);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
@@ -47,7 +49,6 @@
   text-transform: uppercase;
   inset-block-start: 10px;
   inset-inline-end: 0px;
-  visibility: var(--rec-visibility);
 }
 
 .rec::before {
@@ -79,7 +80,7 @@
 }
 
 .header__theme-menu-button_active {
-  border-color:var(--border-font-color) ;
+  border-color: var(--border-font-color);
   cursor: default;
 }
 
