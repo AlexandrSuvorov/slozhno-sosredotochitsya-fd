@@ -1,0 +1,33 @@
+/*
+  Специально для тёмной темы при наличии класса,
+  здесь окажутся стили, которые нужно переопределить принудительно,
+  переключая тему
+*/
+:root.theme-light {
+  --accent-color: #ff8dcb;
+  --secondary-color: #ffc2e6;
+  --optional-color: #f1b2ce;
+  --bg-color: #ffeef6;
+  --bg-cover-image: url(../images/cover-image-light.png);
+  --border-font-color: #353430;
+  --rec-visibility: hidden;
+  --header-text-color: var(--border-font-color);
+  --section-text-color: var(--border-font-color);
+  --footer-shadow-color: #FF0070;
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-color: #ff8dcb;
+    --secondary-color: #ffc2e6;
+    --optional-color: #f1b2ce;
+    --bg-color: #ffeef6;
+    --bg-cover-image: url(../images/cover-image-light.png);
+    --border-font-color: #353430;
+    --rec-visibility: hidden;
+    --header-text-color: var(--border-font-color);
+    --section-text-color: var(--border-font-color);
+    --footer-shadow-color: #FF0070;
+  }
+}
