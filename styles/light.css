@@ -9,6 +9,7 @@
   --optional-color: #f1b2ce;
   --bg-color: #ffeef6;
   --bg-cover-image: url(../images/cover-image-light.png);
+  --accent-color-opacity-40: #32312D66;
   --border-font-color: #353430;
   --rec-visibility: hidden;
   --header-text-color: var(--border-font-color);
@@ -23,6 +24,7 @@
     --optional-color: #f1b2ce;
     --bg-color: #ffeef6;
     --bg-cover-image: url(../images/cover-image-light.png);
+    --accent-color-opacity-40: #32312D66;
     --border-font-color: #353430;
     --rec-visibility: hidden;
     --header-text-color: var(--border-font-color);

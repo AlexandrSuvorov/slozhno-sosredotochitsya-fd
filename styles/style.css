@@ -68,7 +68,6 @@
 }
 
 /*кнопки тем*/
-
 .header__theme-menu-button {
   border: 1px solid transparent;
   color: var(--border-font-color);
@@ -83,7 +82,7 @@
   border-color: var(--border-font-color);
   cursor: default;
 }
-
+/*взаимодействие с кнопками*/
 .header__theme-menu-button:hover {
   border-color: var(--accent-color-opacity-40);
 }
@@ -98,7 +97,10 @@
 
 /*шапка*/
 .header {
-  block-size: 100vh;
+  display: grid;
+  align-content: center;
+  min-block-size: 100vh;
+  gap: 55px;
 }
 
 /*список кнопок*/
@@ -106,22 +108,19 @@
   display: grid;
   justify-content: end;
   align-self: end;
-  margin-block-end: 55px;
-  padding: 10px;
-  padding-block-start: 75px;
+  margin: 10px;
 }
 
 .header__theme-menu-list {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 10px;
 }
 
 /*заголовок*/
 .title {
-  position: relative;
   justify-self: center;
-  align-self: center;
-  padding-inline: 10px;
+  margin-inline: 10px;
   color: var(--secondary-color);
   font-weight: bold;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -133,18 +132,16 @@
 /*текст под заголовком*/
 .header__text {
   margin-inline: 10px;
-  margin-block-start: 55px;
   color: var(--header-text-color);
   font-weight: bold;
   font-size: 18px;
   line-height: 23.4px;
   background-color: var(--accent-color);
-  block-size: 117px;
 }
 
 /*главный блок*/
 .main {
-  margin-block-start: 42px;
+  margin-block-start: 40px;
   padding-inline: 10px;
 }
 
@@ -157,7 +154,7 @@
 .section:last-child {
   margin-block-end: 38px;
 }
-
+/*Заголовки секции*/
 .section__title {
   margin-block-end: 20px;
   color: var(--border-font-color);
@@ -165,10 +162,10 @@
   font-size: 18px;
   line-height: 23.4px;
 }
-
+/*подзаголовки секции*/
 .section__subtitle {
   margin-block-end: 10px;
-  color: var(--border-font-color);
+  color: var(--header-text-color);
   font-weight: bold;
   font-size: 18px;
   line-height: 23.4px;
@@ -176,10 +173,14 @@
 }
 
 .section-advice__title {
-  margin-block-end: 0px;
+  margin-block-end: 20px;
   letter-spacing: 0;
 }
 
+.text-regular {
+  font-weight: normal;
+}
+/*Текст секции*/
 .section__text {
   color: var(--section-text-color);
   font-weight: normal;
@@ -187,7 +188,7 @@
   line-height: 23.4px;
 }
 
-/*ссылка*/
+/*ссылки*/
 .section__link {
   color: var(--section-text-color);
   font-weight: normal;
@@ -195,9 +196,9 @@
   line-height: 23.4px;
   text-decoration: none;
 }
-
+/*Взаимдействие с ссылкой*/
 .section__link:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid var(--border-font-color);  
 }
 
 .section__link:focus {
@@ -227,17 +228,19 @@
 .gallery__images-item {
   width: 100%;
   height: 100%;
-  background-size: cover;
+  object-fit: cover;
+  object-position: center;
 }
 
 /*подвал*/
 .footer {
   display: grid;
-  block-size: 100vh;
+  min-block-size: 100vh;
 }
 
-.footer__title {
+.footer__title{
   text-shadow: 2px 2px 0 var(--footer-shadow-color);
+  align-self: center;
 }
 
 @media (width >=768px) {
@@ -247,8 +250,6 @@
   }
 
   .decorated-zone::after {
-    border-inline-start: 1px solid var(--border-font-color);
-    border-block-end: 1px solid var(--border-font-color);
     inset-block-end: 20px;
     inset-inline-start: 20px;
   }
@@ -258,21 +259,24 @@
     inset-inline-end: 10px;
   }
 
+  .header{
+    gap: 162px;
+  }
+
   .header__theme-menu {
-    margin-block-end: 173px;
-    padding: 192px 20px 0px;
+    margin-inline: 20px;
   }
 
   .title {
     justify-self: start;
-    padding-inline: 0;
+    margin-inline: 0;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
   }
 
   .header__text {
     justify-self: end;
-    margin-inline-end: 20px;
-    margin-block-start: 161px;
-    inline-size: 364px;
+    margin-inline: 20px;
+    inline-size: clamp(364px, calc(100% / 2 - 20px), 491px);
   }
 
   .main {
@@ -284,17 +288,22 @@
     margin-block-end: 80px;
   }
 
-  .section__title {
-    width: 236px;
-  }
-
   .section-advice__title {
     letter-spacing: 0;
+    
+  }
+
+  .title__attention {
+    inline-size: clamp(236px, calc(100% / 3.5), 315px);
   }
 
   .section__what {
-    grid-template-columns: clamp(236px, calc(100% / 3.25), 315px) 1fr;
+    grid-template-columns: clamp(236px, calc(100% / 3.5), 315px) 1fr;
     gap: 20px;
+  }
+
+  .section-advice__title {
+    margin-block-end:20px ;
   }
 
   .gallery__images {
@@ -329,46 +338,36 @@
     grid-column-start: span 2;
   }
 
-  footer {
+  .footer {
     justify-content: center;
   }
 }
 
 @media (width >=1024px) {
+  .header{
+    gap: 114px;
+    align-content: start;
+  } 
+
   .header__theme-menu {
-    display: grid;
     justify-content: center;
-    align-self: start;
-    padding: 10px;
-    padding-block-start: 20px;
-    padding-block-end: 100px;
+    align-self: center;
+    margin: 20px;
+    margin-block-end: 159px;
   }
 
   .header__theme-menu-list {
-    display: flex;
-  }
-
-  .title {
-    font-size: 157px;
+    flex-direction: row;
   }
 
   .header__text {
-    justify-self: end;
-    margin-inline-end: 20px;
-    margin-block-start: 113px;
-    inline-size: 491px;
-    block-size: 71px;
-  }
-
-  .section__title {
-    inline-size: 315px;
+    text-overflow: ellipsis;
   }
 
   .section__what {
     grid-template-columns: 1fr 2fr;
     gap: 10px;
   }
-
 
   .section__attention {
     grid-template-columns: repeat(3, 1fr);
