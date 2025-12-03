@@ -99,8 +99,8 @@
 .header {
   display: grid;
   align-content: center;
-  min-block-size: 100vh;
   gap: 55px;
+  min-block-size: 100vh;
 }
 
 /*список кнопок*/
@@ -119,7 +119,7 @@
 
 /*заголовок*/
 .title {
-  justify-self: center;
+  justify-self: start;
   margin-inline: 10px;
   color: var(--secondary-color);
   font-weight: bold;
@@ -198,7 +198,7 @@
 }
 /*Взаимдействие с ссылкой*/
 .section__link:hover {
-  border-bottom: 1px solid var(--border-font-color);  
+  border-bottom: 1px solid var(--border-font-color);
 }
 
 .section__link:focus {
@@ -238,9 +238,9 @@
   min-block-size: 100vh;
 }
 
-.footer__title{
-  text-shadow: 2px 2px 0 var(--footer-shadow-color);
+.footer__title {
   align-self: center;
+  text-shadow: 2px 2px 0 var(--footer-shadow-color);
 }
 
 @media (width >=768px) {
@@ -259,7 +259,7 @@
     inset-inline-end: 10px;
   }
 
-  .header{
+  .header {
     gap: 162px;
   }
 
@@ -270,7 +270,7 @@
   .title {
     justify-self: start;
     margin-inline: 0;
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header__text {
@@ -290,7 +290,8 @@
 
   .section-advice__title {
     letter-spacing: 0;
-    
+    margin-block-end: 20px;
+
   }
 
   .title__attention {
@@ -300,10 +301,6 @@
   .section__what {
     grid-template-columns: clamp(236px, calc(100% / 3.5), 315px) 1fr;
     gap: 20px;
-  }
-
-  .section-advice__title {
-    margin-block-end:20px ;
   }
 
   .gallery__images {
@@ -344,10 +341,10 @@
 }
 
 @media (width >=1024px) {
-  .header{
-    gap: 114px;
+  .header {
     align-content: start;
-  } 
+    gap: 114px;
+  }
 
   .header__theme-menu {
     justify-content: center;
